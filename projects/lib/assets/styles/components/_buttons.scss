@@ -4,7 +4,10 @@
  *
  */
 
-.btn-primary-demo {
+@import "../../../assets/styles/abstracts/variables";
+
+.btn-primary-demo{
+  @extend .btn;
   @extend .btn-primary;
   background-color:$pl-primary;
   border-color: $pl-primary;
@@ -28,6 +31,7 @@
 
 
 .btn-success-demo {
+  @extend .btn;
   @extend .btn-success;
   background-color:$pl-secondary;
   border-color: $pl-secondary;
@@ -51,6 +55,7 @@
 }
 
 .btn-outline-primary-demo {
+  @extend .btn;
   @extend .btn-outline-info;
   background-color: inherit;
   border-color: $pl-primary;
@@ -69,6 +74,7 @@
 }
 
 .btn-link-demo {
+  @extend .btn;
   @extend .btn-light;
   border-radius: 0 !important;
   background-color: inherit;
