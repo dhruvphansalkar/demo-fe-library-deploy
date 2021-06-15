@@ -1,0 +1,76 @@
+/**
+ * Lib: Switches
+ * This file contains all the necessary properties for styling switches.
+ *
+ */
+
+
+.custom-switch-demo {
+    @extend .custom-switch;
+  }
+  .custom-control-switch-demo {
+    @extend .custom-control;
+  }
+  .custom-control-switch-input-demo {
+    @extend .custom-control-input;
+    color: #fff;
+    background-color: #199aaf;
+    border-color: #199aaf;
+  }
+  .custom-control-switch-label-demo {
+    @extend .custom-control-label;
+    color: #199aaf;
+    font-weight: 600;
+  }
+
+  .custom-control-switch-input-demo:checked ~ .custom-control-switch-label-demo::before {
+    color: #fff;
+    border-color: #199aaf;
+    background-color: #199aaf;
+  }
+  .custom-control-switch-input-demo:not(:disabled):active ~ .custom-control-switch-label-demo::before {
+    color: #fff;
+    background-color: #199aaf;
+    border-color: #199aaf;
+  }
+  .custom-control-switch-input-demo:focus:not(:checked) ~ .custom-control-switch-label-demo::before {
+    border-color: #199aaf;
+  }
+  .custom-control-switch-input:focus:not(:checked) ~ .custom-control-switch-label::before, .custom-control-input:focus:not(:checked) ~ .custom-control-label-demo::before, .custom-control-input-demo:focus:not(:checked) ~ .custom-control-label::before, .custom-control-input-demo:focus:not(:checked) ~ .custom-control-label-demo::before {
+    border-color: #199aaf;
+  }
+  .custom-control-switch-input-demo:enabled ~ .custom-control-switch-label-demo::before {
+    border-color: #199aaf;
+  }
+  .custom-control-switch-input-demo:enabled ~ .custom-control-switch-label-demo::after {
+    background-color:  #199aaf;
+  }
+  .custom-control-switch-input-demo:focus ~ .custom-control-switch-label-demo::before {
+    box-shadow: none
+  }
+
+  .custom-control-switch-input-demo:disabled ~ .custom-control-switch-label-demo::before {
+    border-color: #199aaf;
+  }
+  .custom-control-switch-input-demo:disabled ~ .custom-control-switch-label-demo:disabled::after {
+    background-color:  #ccc;
+  }
+  .custom-control-switch-input-demo[disabled] ~ .custom-control-switch-label-demo, .custom-control-switch-input-demo:disabled ~ .custom-control-switch-label-demo {
+    color: #199aaf;
+  }
+  .custom-control-input:not(:disabled):active ~ .custom-control-label::before, .custom-control-input:not(:disabled):active ~ .custom-control-switch-label-demo::before, .custom-control-switch-input-demo:not(:disabled):active ~ .custom-control-label::before,
+   .custom-control-switch-input-demo:not(:disabled):active ~ .custom-control-switch-label-demo::before {
+    color: #fff;
+    background-color: #199aaf;
+    border-color: #199aaf;
+}
+  .custom-control-switch-input-demo:checked ~ .custom-control-switch-label-demo::before {
+    color: #fff;
+    border-color: #199aaf;
+    background-color: #199aaf;
+  }
+  .custom-label-demo{
+    font-weight: 600;
+    color: #199aaf;
+    margin-right: 3rem;
+  }

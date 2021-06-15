@@ -1,0 +1,25 @@
+.custom-radio-button-demo {
+  @extend .custom-radio;
+}
+
+.custom-control-radio-button-label-demo {
+  @extend .custom-control-label;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.form-radio-demo {
+  @extend .custom-control-input;
+
+  &:checked~.custom-control-radio-button-label-demo::before {
+    border-color: #73b80b;
+    background-color: #73b80b;
+    box-shadow: none;
+  }
+
+  &:not(:disabled):active~.custom-control-radio-button-label-demo::before {
+    color: #fff;
+    background-color: #73b80b;
+    border-color: #73b80b;
+  }
+}

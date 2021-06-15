@@ -1,0 +1,50 @@
+.header-demo{
+    height: 3rem;
+    width: 100%;
+    padding: 0.438rem;
+    top: 0%;
+    left: 0%;
+    background-color: #FFFFFF;
+    box-shadow: 0 0.188rem 0.313rem 0 rgba(0,0,0,0.15);
+}
+.language-dropdown-demo{
+    float: right;
+    top: 0rem;
+    border: none;
+    position: static;
+    font-size: 0.75rem;
+    color: #0072A2;
+}
+.company-description-demo{
+    float: right;
+    top: 0rem;
+    position: static;
+    font-size: 0.75rem;
+    color: #0072A2;
+}
+.company-logo-demo{
+    height: 2.125rem;
+    position: absolute;
+    width: 9.375rem;
+}
+.menu-image-demo{
+    float: left;
+    height: 2.125rem;
+    width: 2.125rem;
+    margin-right: 0.625rem;
+    cursor: pointer;
+}
+.clipboard-icon-demo{
+    margin-right: 0.625rem;
+    height: 0.75rem;
+    width: 0.813rem;
+    margin-top: 0.125rem;
+    margin-left: 0.125rem
+}
+.operator-details-demo{
+    float: right;
+    border: none;
+    position: static;
+    font-size: 0.625rem;
+    color: #777E8B;
+}

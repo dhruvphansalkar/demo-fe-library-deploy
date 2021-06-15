@@ -1,0 +1,16 @@
+<!--classes for tab component-->
+<div class="card m-5 p-2">
+    <!--classes for tab headers-->
+    <div class="small-box align-self-center d-flex justify-content-around">
+        <ng-container *ngFor="let head of tabInstances; let i = index">
+            <a id="pill-link" [class]="head.titleCssClass" href="javascript:void(0)" (click)="tabClicked(i)" class="flex-fill p-1">
+                <div class="text-center">{{head?.title}}</div>
+            </a>   
+        </ng-container>
+    </div>
+    <!--classes for tab content-->
+    <div class="px-2">
+        <ng-content select="lib-pill-tab"></ng-content>
+    </div>
+</div>
+

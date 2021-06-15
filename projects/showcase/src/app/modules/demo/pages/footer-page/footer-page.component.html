@@ -1,0 +1,35 @@
+<ng-demo-page>
+  <div pageTitle>
+    Footer Component
+  </div>
+  <div description>
+    This component will display a footer tall 57px. The footer is sticky at
+    the bottom, accept 1 Input property for displaying the Product Name in
+    the right side.
+  </div>
+  <div examplesTab>
+    <lib-footer [productName]="'Demo'"></lib-footer>
+    <div class="row">
+      <div class="col">
+        <pre><code [innerText]="footerHtmlCode"></code></pre>
+      </div>
+    </div>
+  </div>
+  <div apiOverview>
+    <div class="h2">Input Properties</div>
+    <div class="row col">
+      <table class="table">
+        <tr>
+          <th>Property Name</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td><code>ProductName</code></td>
+          <td>string</td>
+          <td>The name to display in the footer for the current product</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</ng-demo-page>

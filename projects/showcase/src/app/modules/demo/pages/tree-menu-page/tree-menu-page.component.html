@@ -1,0 +1,68 @@
+<ng-demo-page>
+  <div pageTitle>
+    Tree Menu Component
+  </div>
+  <div description>
+    This component will show a hierarchical structure in a tree view.
+    It will internally call itself recursively if the elements passed as input will also contain children, also,
+    it will display an icon whether the item will be expanded or not.
+    Could contains route inside items and even external link.
+  </div>
+  <div examplesTab>
+    <lib-tree-menu [menuItems]="items"></lib-tree-menu>
+    <div class="row">
+      <div class="col">
+        <pre><code [innerText]="treeMenuHtmlCode"></code></pre>
+      </div>
+    </div>
+  </div>
+  <div apiOverview>
+    <div class="h2">Input Properties</div>
+    <div class="row col">
+      <table class="table">
+        <tr>
+          <th>Property Name</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td><code>menuItems</code></td>
+          <td>TreeMenuModel[]</td>
+          <td>The hierarchical data to display</td>
+        </tr>
+      </table>
+    </div>
+    <div class="h2">TreeMenuModel</div>
+    <div class="row col">
+      <table class="table">
+        <tr>
+          <th>Property Name</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td><code>text</code></td>
+          <td>string</td>
+          <td>The name of the item that will be displayed</td>
+        </tr>
+        <tr>
+          <td><code>routerLink</code></td>
+          <td>string</td>
+          <td>Not required. The route of the item if contained.</td>
+        </tr>
+        <tr>
+          <td><code>externalLink</code></td>
+          <td>string</td>
+          <td>Not required. Link to an external resourcer</td>
+        </tr>
+        <tr>
+          <td><code>children</code></td>
+          <td>TreeMenuModel[]</td>
+          <td>Not required. Children that will be render as a sublevel of the menu</td>
+        </tr>
+        <tr>
+      </table>
+    </div>
+  </div>
+</ng-demo-page>
+

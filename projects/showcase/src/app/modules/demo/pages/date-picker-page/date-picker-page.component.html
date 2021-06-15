@@ -1,0 +1,186 @@
+<ng-demo-page>
+  <div pageTitle>
+    Date Picker Component
+  </div>
+  <div description>
+    This components provide a DatePicker based on ng-bootstrap's one.
+    It can be easily integrated inside forms and could be used even as an input element.
+    <div class="h2 my-4">How to use</div>
+    For using the DatePicker we need to import the <code>DatePickerModule</code>.
+    The module provides the <code>DatePickerComponent</code> and the <code>DatePickerConfig</code>.
+    It could be placed inside a Form for working properly and a FormControl should be passed to it for accessing all the
+    FormControl functionalities such as provide disable/enable API, or used with a raw model using <code>ngModel</code>
+    A DatePickerConfig object could be passed for configuring the DatePicker, otherwise it will have a default
+    behaviour.
+    You could size the input passing, or wrapping, the component with some Bootstrap <code>row</code> and
+    <code>col</code>
+    classes
+  </div>
+  <div examplesTab>
+    <div class="h2 my-4">Date Picker using FormControl</div>
+    <div class="row">
+      <div class="col-5">
+        <form [formGroup]="datePickerForm">
+          <lib-date-picker label="Date Picker" id="datepicker-1" [config]="datePickerConfig"
+            [formControl]="datePickerForm.get('dateControl')" (todayClick)="setTodayDateFormControl($event)">
+          </lib-date-picker>
+        </form>
+      </div>
+      <div class="col-5">
+        <div class="row">
+          <div class="col-12">
+            <button class="btn mx-1 btn-primary-demo" (click)="submitForm()">Submit</button>
+            <button class="btn mx-1 btn-danger" (click)="disableForm()">Disable</button>
+            <button class="btn mx-1 btn-success-demo" (click)="enableForm()">Enable</button>
+          </div>
+        </div>
+        <div class="row my-3">
+          <div class="col-12">
+            <div class="h5">Form State</div>
+            <div class="bg-light">
+              <div>
+                Valid: {{datePickerForm.valid}}
+              </div>
+              <div>
+                Touched: {{datePickerForm.touched}}
+              </div>
+              <div>
+                Dirty: {{datePickerForm.dirty}}
+              </div>
+              <div>
+                Disabled: {{datePickerForm.disabled}}
+              </div>
+              <div>
+                Value: {{datePickerForm.value | json}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <pre><code [innerText]="exampleWithFormControl"></code></pre>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        You can use this component as a normal <code>formControl</code>, with all the advantages of the case (Error
+        handling,
+        dynamic form generator and so on)
+      </div>
+    </div>
+    <div class="h2 my-4">Date Picker using a raw model</div>
+    <div class="row">
+      <lib-date-picker label="Date Picker" id="datepicker-2" class="col-3" [config]="datePickerConfig"
+        [(ngModel)]="model" (todayClick)="setTodayDateRawModel($event)"></lib-date-picker>
+      <div>
+        Model Value: {{ model | json }}
+      </div>
+    </div>
+    <div>
+      <pre>
+        <code [innerText]="exampleWithRawModel"></code>
+      </pre>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div>You can use this component even with the <code>ngModels</code>, this allow you a faster development could
+          effort some limitations.</div>
+        <div><a href="https://angular.io/guide/forms-overview4a472681f7fd">Here</a> you could find some overview for
+          choosing
+          between the two solutions in base of your needs.</div>
+      </div>
+    </div>
+  </div>
+  <div apiOverview>
+    <div class="h2 my-4">Input properties</div>
+    <div class="row">
+      <div class="col">
+        <table class="table">
+          <tr>
+            <th>Property Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td><code>id</code></td>
+            <td>string</td>
+            <td>Used for passing an id, if null 'date-picker' will be used as default</td>
+          </tr>
+          <tr>
+            <td><code>label</code></td>
+            <td>string</td>
+            <td>Used for passing a label, if null 'Date Picker' will be used as default</td>
+          </tr>
+          <tr>
+            <td><code>footerText</code></td>
+            <td>string</td>
+            <td>Used for passing the text to display as button for selecting the today date, if null will be used
+              'today'
+              as default
+            </td>
+          </tr>
+          <tr>
+            <td><code>config</code></td>
+            <td>DatePickerConfig</td>
+            <td>Used for passing some configurations to DatePickerComponent, see the below section for further
+              information</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="h2 my-4">Output events</div>
+    <div class="row">
+      <div class="col">
+        <table class="table">
+          <tr>
+            <th>Property Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td><code>todayClick</code></td>
+            <td>NgbDate</td>
+            <td>Event emitter for handling the today click</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="h2 my-4">DatePickerConfig</div>
+    <table class="table">
+      <tr>
+        <th>Property Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td><code>showLabel</code></td>
+        <td>boolean</td>
+        <td>Used for displaying label</td>
+      </tr>
+      <tr>
+        <td><code>placeholder</code></td>
+        <td>String</td>
+        <td>Placeholder string</td>
+      </tr>
+      <tr>
+        <td><code>navigation</code></td>
+        <td>string</td>
+        <td>Used for placing the date picker</td>
+      </tr>
+      <tr>
+        <td><code>startDate</code></td>
+        <td>NgbDate</td>
+        <td>Used for setting an initial value</td>
+      </tr>
+      <tr>
+        <td><code>autoclose</code></td>
+        <td>true, false, 'inside', 'outside'</td>
+        <td>Used handling the autoclose</td>
+      </tr>
+    </table>
+  </div>
+</ng-demo-page>

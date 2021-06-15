@@ -1,0 +1,73 @@
+/**
+ * Lib: Variablees
+ * This file contains all the necessary variables.
+ * Variables could be overridden importing this file
+ * After overriding the variables
+ */
+
+
+$browser-context: 16; // Default font size
+$footer-height: 54px;
+
+//
+// Default color variables
+//
+$pl-primary:    #00AFD5 !default;
+$pl-secondary:  #84BF41 !default;
+$pl-success:    #60BC00 !default;
+$pl-info:       #0072A2 !default;
+$pl-green-dark: #007744 !default;
+$pl-danger:     #E20613 !default;
+$pl-orange:     #FF5C0C !default;
+$pl-purple:     #200837 !default;
+$pl-link:       #146a8f !default;
+
+//
+// Darken variables
+//
+
+$pl-primary-dark:   darken($pl-primary, 10%) !default;
+$pl-secondary-dark: darken($pl-secondary, 10%) !default;
+$pl-success-dark:   darken($pl-secondary, 10%) !default;
+
+
+$pl-white:        #FFF !default;
+$pl-grey-lighter: #D8D8D8 !default;
+$pl-grey-light:   #9AA2B4 !default;
+$pl-grey:         #787D8C !default;
+$pl-grey-dark:    #383B41 !default;
+$pl-black:        #000 !default;
+
+$pl-white-dark: darken($pl-white, 10%) !default;
+
+$pl-grey-colors: () !default;
+
+$pl-grey-colors: map-merge(
+    (
+      "pl-grey-lighter":  $pl-grey-lighter,
+      "pl-grey-light":    $pl-grey-light,
+      "pl-grey":          $pl-grey,
+      "pl-grey-dark":     $pl-grey-dark,
+    ),
+    $pl-grey-colors
+);
+
+
+$pl-theme-colors: () !default;
+
+$pl-theme-colors: map-merge(
+    (
+      "primary":    $pl-primary,
+      "secondary":  $pl-secondary,
+      "success":    $pl-success,
+      "danger":     $pl-danger,
+      "light":      $pl-grey-lighter,
+      "dark":       $pl-black,
+    ),
+    $pl-theme-colors
+);
+
+$pl-sidebar-width: 275px;
+$pl-sidebar-collapsed-w: 75px;
+
+

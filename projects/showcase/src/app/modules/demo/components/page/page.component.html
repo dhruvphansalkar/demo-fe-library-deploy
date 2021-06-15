@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="h1 mt-4">
+    <ng-content select="[pageTitle]"></ng-content>
+  </div>
+  <div class="showcase--component-preview">
+    <ng-content select="[component]"></ng-content>
+  </div>
+  <ngb-tabset [destroyOnHide]="true">
+    <ngb-tab title="Description">
+      <ng-template ngbTabContent>
+        <div class="p-2 showcase--section">
+          <ng-content select="[description]"></ng-content>
+        </div>
+      </ng-template>
+    </ngb-tab>
+    <ngb-tab title="Examples">
+      <ng-template ngbTabContent>
+        <div class="p-2 showcase--section">
+          <ng-content select="[examplesTab]"></ng-content>
+        </div>
+      </ng-template>
+    </ngb-tab>
+    <ngb-tab title="API Overview">
+      <ng-template ngbTabContent>
+        <div class="p-2 showcase--section">
+          <ng-content select="[apiOverview]"></ng-content>
+        </div>
+      </ng-template>
+    </ngb-tab>
+  </ngb-tabset>
+</div>

@@ -1,0 +1,25 @@
+.small-box{
+    width: 40%;
+    height: 1.9rem;
+    min-width: 15rem;
+    position: relative;
+    top: -1.5rem;
+    background-color: #e0e3e8;
+    overflow: hidden;
+    border-radius: 0.4rem;
+}
+
+div.card {
+    background-color: #F5F5F5;
+}
+
+.title-active {
+    color: white !important;
+    background-color: #0072a2;
+    border: 0px !important;
+}
+
+#pill-link {
+    color: grey;
+    text-decoration: none;
+}

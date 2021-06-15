@@ -1,0 +1,35 @@
+.navbar-demo {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ffff;
+    border-bottom: 0.09rem solid #bbb9b9;
+  }
+ 
+ .navbar-demo li {
+    float: left;
+  }
+  
+ .navbar-demo li a {
+    display: block;
+    color: #423a3a;
+    text-align: center;
+    padding: 0.5rem;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    min-width: 10rem;
+    cursor: pointer;
+    border-bottom: 0.20rem solid #ffffff;
+  }
+ 
+ .navbar-demo li a:hover {
+      border-bottom: 0.20rem solid #6ab56a;
+  }
+ .navbar-demo li a:active {
+    border-bottom: 0.20rem solid #6ab56a;
+  }
+ .navbar-demo li a:disabled {
+    border-bottom: 0.20rem solid #ccc;
+  }

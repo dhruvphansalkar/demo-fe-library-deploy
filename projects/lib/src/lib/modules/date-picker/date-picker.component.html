@@ -1,0 +1,25 @@
+<div class="form-group">
+  <label [for]="id" class="col-form-label"
+         [hidden]="config.showLabel ? false : true">{{label}}</label>
+  <input class="form-control"
+         placeholder="yyyy-mm-dd"
+         name="dateControl"
+         ngbDatepicker #d="ngbDatepicker"
+         [navigation]="config.navigation ? config.navigation : 'arrows'"
+         [placeholder]="config.placeholder ? config.placeholder : 'yyyy-mm-dd'"
+         [placement]="config.placement ? config.placement : 'bottom'"
+         [id]="id"
+         [disabled]="disabled"
+         (dateSelect)="onChange($event)"
+         (blur)="onTouched()"
+         [footerTemplate]="t"
+         [(ngModel)]="value"
+  >
+  <i class="fa fa-calendar-o" (click)="d.toggle()"></i>
+</div>
+<ng-template #t>
+  <div class="demo-dp--footer">
+    <button class="btn btn-link" (click)="onTodayClick($event)">{{footerText}}</button>
+  </div>
+</ng-template>
+

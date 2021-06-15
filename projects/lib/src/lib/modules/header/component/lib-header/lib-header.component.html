@@ -1,0 +1,28 @@
+<div class="header-demo">
+    <div class="row">
+        <div class="col-3">
+            <img class="menu-image-demo" type="button" (click)="clickMenu()" src="assets/icons/menu.jpg">
+            <span class="company-logo-demo">
+                <ng-content class="company-logo-demo" select="[companyLogo]"></ng-content>
+            </span>
+        </div>
+        <div class="col-9">
+            <select class="language-dropdown-demo text-right">
+                <option>English</option>
+                <option>Marathi</option>
+            </select>
+            <p>
+                <span>
+                    <img class="company-description-demo clipboard-icon-demo" src="assets/icons/copy.png">
+                    <a href="#" class="company-description-demo">
+                        <ng-content select="[companyDescription]"></ng-content>
+                    </a>
+                </span>
+                <br>
+                <a class="operator-details-demo">
+                    <ng-content select="[operatorDetails]"></ng-content>
+                </a>
+            </p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,42 @@
+<ng-demo-page>
+    <div pageTitle>
+        Switch
+    </div>
+    <div description>
+        <div>
+            Switch is used for activating one of two predefined options.
+        </div>
+    </div>
+    <div examplesTab>
+        <p>
+            An example of Switch
+        </p>
+        <div>
+            <div class="custom-control-switch-demo custom-switch-demo">
+                <span class="custom-label-demo">MESE</span>
+                <input type="checkbox" class="custom-control-switch-input-demo" id="customSwitch1"
+                    (change)="onSelectionChange($event.target.checked)">
+                <label class="custom-control-switch-label-demo" for="customSwitch1">TRIMESTRE</label>
+            </div>
+        </div>
+        <pre>
+        <code>
+            &lt;div class="custom-control-switch-demo custom-switch-demo"&gt;
+            &lt;span class="custom-label-demo">MESE&lt;/span&gt;
+            &lt;input type="checkbox" class="custom-control-switch-input-demo" id="customSwitch1"
+                (change)="onSelectionChange($event.target.checked)"&gt;
+            &lt;label class="custom-control-switch-label-demo" for="customSwitch1">TRIMESTRE&lt;/label&gt;
+            &lt;/div&gt;
+        </code>
+      </pre>
+    </div>
+    <div apiOverview>
+        <p>
+            To stylize the switch as showed in examples add all the <strong>classes</strong> to the HTML element.
+        </p>
+        <p>
+            To disable the switch as showed in examples add the <strong>disabled</strong> attribute to the input HTML
+            element.
+        </p>
+    </div>
+</ng-demo-page>

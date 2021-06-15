@@ -1,0 +1,42 @@
+// /* ########################## bootstrap custom checkbox ################################*/
+
+.custom-checkbox-demo {
+  @extend .custom-checkbox;
+}
+
+.custom-control-checkbox-label-demo {
+  @extend .custom-control-label;
+}
+
+.form-checkbox-demo {
+  @extend .custom-control-input;
+
+  &:focus~.custom-control-checkbox-label-demo::before {
+    border-color: #0ac534 !important;
+    border-radius: 0.1875rem;
+  }
+
+  &:checked~.custom-control-checkbox-label-demo::before {
+    border-color: #0ac534 !important;
+    background-color: #0ac534 !important;
+    border-radius: 0.1875rem;
+  }
+
+  &:focus~.custom-control-checkbox-label-demo::before {
+    box-shadow: none;
+  }
+
+  &:focus:not(:checked)~.custom-control-checkbox-label-demo::before {
+    border-color: #5bd778 !important;
+  }
+
+  &:not(:disabled):active~.custom-control-checkbox-label-demo::before {
+    background-color: #d6f5dd !important;
+    border-color: #d6f5dd !important;
+  }
+
+  &:not(:disabled):active~.custom-control-checkbox-label-demo::before {
+    background-color: #199aaf;
+    border-color: #199aaf;
+  }
+}

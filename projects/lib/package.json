@@ -1,0 +1,15 @@
+{
+  "name": "@lib/core",
+  "version": "0.0.8",
+  "dependencies": {
+    "tslib": "^2.0.0"
+  },
+  "peerDependencies": {
+    "@angular/common": "^10.0.6",
+    "@angular/core": "^10.0.6",
+    "@ng-bootstrap/ng-bootstrap": "^7.0.0",
+    "bootstrap": "^4.5.0",
+    "font-awesome": "^4.7.0",
+    "rxjs": "^6.6.2"
+  }
+}

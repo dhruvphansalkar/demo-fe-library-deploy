@@ -1,0 +1,8 @@
+<div class="sidebar-demo"
+  [ngClass]="{ 'sidebar-expanded': isCollapse === false, 'sidebar-collapse': isCollapse === true }">
+  <div class="sidebar-button-demo" (click)="collapseSidebar()">
+    <div class="sidebar-button-icon-demo" textIconDemo [iconClass]="['fa', 'fa-arrow-left']"></div>
+  </div>
+  <ng-content select="[input]"></ng-content>
+  <ng-content select="[menu]"></ng-content>
+</div>

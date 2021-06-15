@@ -1,0 +1,8 @@
+<nav>
+    <ul class="navbar-demo">
+        <li class="navbar-li-demo" *ngFor="let menu of navMenu; let i = index">
+            <a class="navbar-a-demo" (click)="onSelectionChange(i)">{{menu.label}}
+            </a>
+        </li>
+    </ul>
+</nav>

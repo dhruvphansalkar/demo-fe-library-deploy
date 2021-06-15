@@ -1,0 +1,45 @@
+<ng-demo-page>
+    <div pageTitle>
+        Nav
+    </div>
+    <div description>
+        <div>
+            This is a list of a links navigating to specified location.
+            They are usually presented as a horizontal bar of links at the top of every page. </div>
+    </div>
+    <div examplesTab>
+        <p>
+            An example of Nav
+        </p>
+        <div>
+            <lib-nav (navEvent)="receivedNavIndex($event)"  [navMenu]=navMenu></lib-nav>
+        </div>
+        <div class="h5">HTML</div>
+        <pre>
+          <code>
+            
+              &lt;lib-nav [navMenu]=navMenu&gt;&lt;/lib-nav&gt;</code>
+      </pre>
+      <div class="h5">TS</div>
+        <pre>
+        <code>
+    
+            navMenu: object = [
+                {{'{'}} label: 'Vendite Attive', path: '#' {{'}'}},
+                {{'{'}} label: 'Opportunity', path: '#' {{'}'}},
+                {{'{'}} label: 'Vendite Estine', path: '#' {{'}'}}
+            ];
+           </code>
+    </pre>
+    </div>
+    <div apiOverview>
+        <div class="h5">Input Properties</div>
+        <p>
+            To add a nav menu, add the label and path of the new menu in the <strong>navMenu object</strong> of
+            component.ts
+            file and bind <strong>navMenu</strong> input in the selector tag of <strong>lib-nav</strong> as shown in the
+            example.
+        </p>
+
+    </div>
+</ng-demo-page>

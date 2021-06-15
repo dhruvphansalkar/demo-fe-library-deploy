@@ -1,0 +1,50 @@
+
+<ng-demo-page>
+    <div pageTitle>
+      Paginator Style
+    </div>
+    <div component>
+    </div>
+    <div description>
+      A styling class is created to modify the look of ng-bootstrap paginator. 
+    </div>
+    <div examplesTab>
+      <p>
+        An example of paginator-demo
+      </p>
+      <div>
+        <ngb-pagination class="paginator-demo" [collectionSize]="70" aria-label="Default pagination">
+        </ngb-pagination>
+      </div>
+      <pre>
+        <code>&lt;ngb-pagination [collectionSize]="70" aria-label="Default pagination"&gt;&lt;/ngb-pagination&gt;</code>
+      </pre>
+      <p>
+        An example of paginator-demo with custom icons
+      </p>
+      <div>
+        <ngb-pagination class="paginator-demo" [collectionSize]="70" aria-label="Default pagination">
+            <ng-template ngbPaginationPrevious><i class="fa fa-angle-left"></i></ng-template>
+            <ng-template ngbPaginationNext><i class="fa fa-angle-right"></i></ng-template>
+        </ngb-pagination>
+      </div>
+      <pre>
+        <code>
+            &lt;ngb-pagination [collectionSize]="70" aria-label="Default pagination"&gt;
+                &lt;ng-template ngbPaginationPrevious&gt;&lt;i class=&quot;fa fa-angle-left&quot;&gt;&lt;/i&gt;&lt;/ng-template&gt;
+                &lt;ng-template ngbPaginationNext&gt;&lt;i class=&quot;fa fa-angle-right&quot;&gt;&lt;/i&gt;&lt;/ng-template&gt;
+            &lt;/ngb-pagination&gt;
+        </code>
+      </pre>
+    </div>
+    <div apiOverview>
+      <div class="h5">Icon Integration</div>
+      <div>
+        <span class="">Icon classes from third party packs like font awesome, Fontello, etc can be used with the paginator for next and previous buttons <strong>&lt;i&gt;</strong> tag.</span>
+      </div>
+      <div class="h5">API</div>
+      <div>
+        <span class="">Please click <strong><a href="https://ng-bootstrap.github.io/#/components/pagination/api">here</a></strong> to know more about the ngb-pagination component's API</span>
+      </div>
+    </div>
+</ng-demo-page>

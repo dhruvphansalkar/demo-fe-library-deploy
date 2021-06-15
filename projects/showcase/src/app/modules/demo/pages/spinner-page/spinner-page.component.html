@@ -1,0 +1,57 @@
+<ng-demo-page>
+    <div pageTitle>
+      Spinner Component
+    </div>
+    <div component>
+        
+    </div>
+    <div description>
+      This spinner component will show a spinner at the center of the view while preventing the user's interactions with the content on the page.
+    </div>
+    <div examplesTab>
+      <p>
+        Please click the button to display the spinner
+      </p>
+      <div>
+        <lib-spinner [showSprinner]="showSpinner" [customClass]="'text-primary'"></lib-spinner>
+        <button class="btn btn-primary-demo" (click) = "displaySpinner()">show spinner</button>
+      </div>
+      <pre>
+          <code>&lt;lib-spinner [showSprinner]=&quot;showSpinner&quot; [customClass]=&quot;'text-primary'&quot;&gt;&lt;/lib-spinner&gt;</code>
+      </pre>
+    </div>
+    <div apiOverview>
+      <div class="h5">Input Properties</div>
+      <p>
+        To control the displaying and hinding of the spinner toggle <strong>[showSprinner]</strong> input attribute.
+      </p>
+      <p>
+        To set the size of the spinner use the <strong>[size]</strong> attribute. The default value is 5.
+      </p>
+      <p>
+        To assign color to the spinner use the <strong>[customClass]</strong> attribute. It works with default bootsrap color classes as well as custom css classes.
+      </p>
+      
+
+    <div class="h5">Service Overview</div>
+    <p>
+      The showcase of the spinner is controlled using the <strong>SpinnerStatusService</strong> based on the value of the input property <strong>[showSprinner]</strong>.
+      The service uses 2 mehods <strong>show()</strong> and <strong>hide()</strong> to manage the status of the spinner.
+    </p>
+      <pre>
+        <code>
+          show(): void {{'{'}}
+            document.body.style.position = 'fixed';
+            document.body.style.overflow = 'hidden';
+            this.loaderSubject.next(true);
+          {{'}'}}
+        
+          hide(): void {{'{'}}
+            document.body.style.position = '';
+            document.body.style.overflow = '';
+            this.loaderSubject.next(false);
+          {{'}'}}
+        </code>
+    </pre>
+    </div> 
+</ng-demo-page>

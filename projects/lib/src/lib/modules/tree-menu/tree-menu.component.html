@@ -1,0 +1,31 @@
+<div
+  class="tree-menu-demo"
+  [ngClass]="classNames"
+  *ngFor="let item of menuItems"
+>
+  <ul class="nav flex-column">
+    <li class="nav-item" [ngClass]="item.className">
+      <span class="tree-menu-demo__item">
+        <span
+          *ngIf="item.children"
+          class="fa tree-menu-demo__icon"
+          (click)="clickItem(item, $event)"
+          [ngClass]="{ 'fa-caret-down':item.expanded, 'fa-caret-right': !item.expanded }"
+        ></span>
+        <a *ngIf="item.externalLink" [href]="item.externalLink" target="_blank">
+          {{ item.text }}
+        </a>
+        <span *ngIf="item.routerLink" (click)="changeRoute(item, $event)">
+          {{ item.text }}
+        </span>
+        <span *ngIf="!item.routerLink && !item.externalLink">
+          {{ item.text }}
+        </span>
+      </span>
+      <lib-tree-menu
+        *ngIf="item.children && item.expanded"
+        [menuItems]="item.children"
+      ></lib-tree-menu>
+    </li>
+  </ul>
+</div>

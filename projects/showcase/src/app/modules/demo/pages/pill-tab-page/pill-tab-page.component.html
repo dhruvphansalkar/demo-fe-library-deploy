@@ -1,0 +1,54 @@
+<ng-demo-page>
+    <div pageTitle>
+      Pill Tab Set Component
+    </div>
+    <div component>
+    </div>
+    <div description>
+      This is a tabs component which changes view based on which tab is selected
+    </div>
+    <div examplesTab>
+      <p>
+        An example of pills-tab-component
+      </p>
+      <div>
+        <lib-pill-tab-set>
+          <lib-pill-tab [title]="'Tab 1'">
+            Content for Tab 1
+          </lib-pill-tab>
+          <lib-pill-tab [title]="'Tab 2 '">
+            Content for Tab 2  
+          </lib-pill-tab>
+          <lib-pill-tab [title]="'Tab 3'">
+            Content for Tab 3               
+          </lib-pill-tab>
+      </lib-pill-tab-set>
+      </div>
+      <pre>
+        <code>
+        &lt;lib-pill-tab-set&gt;
+          &lt;lib-pill-tab [title]=&quot;'Tab 1'&quot;&gt;
+            Content for Tab 1
+          &lt;/lib-pill-tab&gt;
+          &lt;lib-pill-tab [title]=&quot;'Tab 2 '&quot;&gt;
+            Content for Tab 2  
+          &lt;/lib-pill-tab&gt;
+          &lt;lib-pill-tab [title]=&quot;'Tab 3'&quot;&gt;
+            Content for Tab 3               
+          &lt;/lib-pill-tab&gt;
+        &lt;/lib-pill-tab-set&gt;
+        </code>
+      </pre>
+    </div>
+    <div apiOverview>
+      <p>
+        To set a tab to be selected on load use the <strong>[selectedTabIndex]</strong> input attribute and pass the index of the tab
+      </p>
+      <p>
+        To set the title of each pill use the <strong>[title]</strong> attribute on each &lt;lib-pill-tab-set&gt; selector.
+      </p>
+      <p>
+        Use the <strong>(tabClickEvent)</strong> emmiter to detect tab click event, it will emit the index of the tab clicked.
+      </p>
+    </div>  
+</ng-demo-page>

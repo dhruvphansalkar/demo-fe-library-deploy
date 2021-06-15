@@ -1,0 +1,66 @@
+  .tooltip-example {
+    text-align: left;
+    padding: 0 3.125rem;
+  }
+  .tooltip-example [libTooltipDemo] {
+    display: inline-block;
+    margin: 0.3125rem 0.625rem;
+    width: 11.25rem;
+    height: 3.125rem;
+    border: 0.0625rem solid gray;
+    border-radius: 0.3125rem;
+    line-height: 3.125rem;
+    text-align: center;
+  }
+  .ng-tooltip {
+    position: absolute;
+    max-width: 18.75rem;
+    font-size: 0.75rem;
+    text-align: center;
+    color: #097eb5;
+    font-weight: 600;
+    padding: 0.1875rem 0.5rem;
+    background: #ccdcea;
+    border-radius: 0.0625rem;
+    z-index: 1000;
+    opacity: 0;
+  }
+  .ng-tooltip:after {
+    content: "";
+    position: absolute;
+    border-style: solid;
+  }
+ 
+  .ng-tooltip-top:after {
+    top: 100%;
+    left: 12%;
+    margin-left: -0.3125rem;
+    border-width: 0.3125rem;
+    border-color: #ccdcea transparent transparent transparent;
+  }
+ 
+  .ng-tooltip-bottom:after {
+    bottom: 100%;
+    left: 12%;
+    margin-left: -0.3125rem;
+    border-width: 0.3125rem;
+    border-color: transparent transparent #ccdcea transparent;
+  }
+  .ng-tooltip-left:after {
+    top: 30%;
+    left: 100%;
+    margin-top: -0.3125rem;
+    border-width: 0.3125rem;
+    border-color: transparent transparent transparent #ccdcea;
+  }
+
+  .ng-tooltip-right:after {
+    top: 30%;
+    right: 100%;
+    margin-top: -0.3125rem;
+    border-width: 0.3125rem;
+    border-color: transparent #ccdcea transparent transparent;
+  }
+  .ng-tooltip-show {
+    opacity: 1;
+  }

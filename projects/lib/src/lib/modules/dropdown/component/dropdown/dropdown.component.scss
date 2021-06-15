@@ -1,0 +1,85 @@
+@import "../../../../../../../../node_modules/bootstrap/scss/bootstrap";
+.dropdown-menu-button-demo {
+    @extend .btn-outline-light;
+    text-align: left;
+    background-color: white;
+    border: 1px solid #ced4da;
+    color: black;
+    overflow: hidden;
+    height: calc(1.5em + 0.75rem + 0.125rem);
+}
+
+.dropdown-menu-button-demo:hover:enabled {
+    background-color:white;
+    border: 1px solid #ced4da;
+    color: black;
+}
+
+.show {
+    > .dropdown-toggle.dropdown-menu-button-demo:focus{
+        color: black;
+        background-color: white;
+        border: 1px solid #ced4da;
+        box-shadow: 0 0 0 0.2rem (0 123 255 0.2);
+        -webkit-box-shadow: inset 0 0 0 0.2rem rgba(0,0,0,0), 0 0 0 0.2rem rgba(0, 123, 255, 0.3);
+    }
+}
+
+
+.dropdown-menu-button-demo:disabled {
+    background-color:#f4f4f4;
+    border: 1px solid #ced4da;
+    color: silver;
+}
+
+.dropdown-menu-demo{
+    width: 130%;
+    max-height:8rem;
+    overflow-y:auto;
+    > ::-webkit-scrollbar {
+        width: 10px;
+        background-color: white !important;
+    }
+    > ::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+        background-color: #c4ccd8;
+        opacity: 0.6;
+    }
+    > *:hover {
+        background-color: #e2f0f5;
+        cursor: pointer;
+    }
+}
+
+.dropdown-item:active{
+    background-color: #cce0e7;
+    color: black;
+}
+.dropdown-menu-demo::-webkit-scrollbar-track {
+    width: 10px;
+    background-color: white;
+}
+.dropdown-toggle::after{
+    display: none;
+}
+.dropup .dropdown-toggle::after {
+    display: none;
+}
+
+.icon-align {
+    float: right;
+    margin-top:0.3rem;
+}
+
+.block-button-menu {
+    width: 120% !important;
+}
+
+.btn-block {
+    width: 100%;
+}
+
+.placeholder {
+    color: grey;
+}

@@ -1,0 +1,99 @@
+/**
+ * Lib: Buttons
+ * This file contains all the necessary properties for buttons.
+ *
+ */
+
+.btn-primary-demo {
+  @extend .btn-primary;
+  background-color:$pl-primary;
+  border-color: $pl-primary;
+}
+
+.btn-primary-demo:hover:enabled {
+  background-color:$pl-primary-dark;
+  border-color: $pl-primary-dark;
+}
+
+.btn-primary-demo:focus{
+  background-color: $pl-primary-dark;
+  border-color: $pl-primary-dark;
+}
+
+.btn-primary-demo:disabled {
+  background-color: $pl-primary-dark;
+  border-color: $pl-primary-dark;
+  color: $pl-white;
+}
+
+
+.btn-success-demo {
+  @extend .btn-success;
+  background-color:$pl-secondary;
+  border-color: $pl-secondary;
+}
+
+.btn-success-demo:hover:enabled {
+  background-color:$pl-secondary-dark;
+  border-color: $pl-secondary-dark;
+  color: $pl-white;
+}
+
+.btn-success-demo:focus{
+  background-color: $pl-secondary-dark;
+  border-color: $pl-secondary-dark;
+}
+
+.btn-success-demo:disabled {
+  background-color:$pl-secondary-dark;
+  border-color: $pl-secondary-dark;
+  color: $pl-white;
+}
+
+.btn-outline-primary-demo {
+  @extend .btn-outline-info;
+  background-color: inherit;
+  border-color: $pl-primary;
+  color: $pl-primary;
+}
+
+.btn-outline-primary-demo:hover:enabled {
+  background-color:$pl-primary;
+  border-color: $pl-primary;
+}
+
+.btn-outline-primary-demo:disabled {
+  background-color: inherit;
+  border-color: $pl-grey;
+  color: $pl-grey;
+}
+
+.btn-link-demo {
+  @extend .btn-light;
+  border-radius: 0 !important;
+  background-color: inherit;
+  border: none;
+  color: $pl-link !important;
+  font-weight: 500;
+}
+
+.btn-link-demo:focus {
+  background-color: inherit;
+  border: none;
+  outline: 0 !important;
+  outline-offset: 0  !important;
+  background-image: none  !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none  !important;
+  text-decoration: underline;
+}
+
+.btn-link-demo:hover:enabled {
+  background-color: inherit;
+  border-color: inherit;
+}
+
+.btn-link-demo:disabled {
+  background-color: inherit;
+  border: none;
+}

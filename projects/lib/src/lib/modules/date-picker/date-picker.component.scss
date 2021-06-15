@@ -1,0 +1,56 @@
+::ng-deep lib-date-picker {
+  .form-group {
+    position: relative;
+  }
+  i {
+    position: absolute;
+    right: 15px;
+    bottom: 12px;
+    cursor: pointer;
+  }
+  ngb-datepicker {
+    .btn-light {
+      color: #1D0932;
+      font-size: 14px;
+      &:focus {
+        border: none;
+      }
+    }
+    .ngb-dp-navigation-chevron {
+      color: #a9a9a9;
+      border-width: .1em .1em 0 0;
+    }
+    .ngb-dp-week {
+      border: none;
+    }
+    .ngb-dp-month-name {
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .ngb-dp-weekday {
+      color: #6c757d;
+      font-style: normal;
+    }
+    .ngb-dp-week,
+    .ngb-dp-header,
+    .ngb-dp-month-name {
+      background-color: white;
+    }
+    .demo-dp--footer {
+      color: #0072A2;
+      height: 40px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      .btn-link {
+        font-size: 14px;
+        font-weight: bold;
+        text-transform: uppercase;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

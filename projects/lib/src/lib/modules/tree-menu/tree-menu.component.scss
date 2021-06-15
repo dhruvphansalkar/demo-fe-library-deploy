@@ -1,0 +1,15 @@
+.tree-menu-demo {
+  padding-left: 20px;
+  li {
+    margin: 5px 0;
+    position: relative;
+  }
+  &__item {
+    cursor: pointer;
+  }
+  &__icon {
+    position: absolute;
+    left: -15px;
+    top: 4px;
+  }
+}

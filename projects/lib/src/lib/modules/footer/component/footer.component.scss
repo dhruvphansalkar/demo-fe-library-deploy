@@ -1,0 +1,29 @@
+@import '../../../../../assets/styles/abstracts/variables';
+
+lib-footer {
+  position: fixed;
+  bottom: 0;
+  max-width: 100vw;
+  height: em(57);
+}
+
+::ng-deep {
+  .product-name {
+    color: $pl-orange;
+    font-weight: 500;
+
+    span {
+      font-weight: bold;
+    }
+
+    .text-black {
+      color: #292929;
+    }
+  }
+
+  .small-text {
+    color: #777E8B;
+    font-weight: lighter;
+    font-size: 12px;
+  }
+}

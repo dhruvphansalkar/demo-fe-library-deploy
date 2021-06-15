@@ -1,0 +1,69 @@
+<ng-demo-page>
+    <div pageTitle>
+      DropDown Component
+    </div>
+    <div component>
+    </div>
+    <div description>
+      This is a dropdown input component which implements ControlValueAccessor interface to act as a form control. 
+    </div>
+    <div examplesTab>
+      <p>
+        An example of Drop-Down component
+      </p>
+      <form [formGroup]="filterForm">
+        <div class="box">
+          <lib-dropdown [blockButton] = "true" #dropDown formControlName="{{'abc'}}" [defaultLabel] = "'Select your club'">
+            <lib-dropdown-option [value] = "'liv'">
+              <span class="color">Liverpool</span>
+            </lib-dropdown-option>
+            <lib-dropdown-option [value] = "'utd'">
+              <span style="color:red">United</span>
+            </lib-dropdown-option>
+            <lib-dropdown-option [value] = "'che'">
+              <span style="color:blue">Chelsea</span> 
+            </lib-dropdown-option>
+          </lib-dropdown><br>
+        </div>
+      </form>
+      <p>------------------HTML------------------</p>
+      <pre>
+        <code>
+          &lt;lib-dropdown [defaultLabel] = &quot;'Select your club'&quot; &gt;
+            &lt;lib-dropdown-option [value] = "'liv'"&gt;Liverpool&lt;/lib-dropdown-option&gt;
+            &lt;lib-dropdown-option [value] = "'utd'"&gt;United&lt;/lib-dropdown-option&gt;
+            &lt;lib-dropdown-option [value] = "'che'"&gt;Chelsea&lt;/lib-dropdown-option&gt;
+          &lt;/lib-dropdown&gt;
+        </code> 
+      </pre>  
+    </div>
+    <div apiOverview>
+      <div class="h4"><strong> Properties (lib-dropdown) </strong></div>
+      <p>
+        To disable the control using the template use <strong>[isDisabled]</strong> input property.
+      </p>
+      <p>
+        To pass a default label to the dropdown use <strong>[defaultLabel]</strong> input property. Note that this does not assign value to the dropdown.
+      </p>
+      <p>
+        To set the dropdown button at a block level set <strong>[blockButton]</strong> input property.
+      </p>
+      <p>
+        To customize the placement of the dropdown list use <strong>[placement]</strong> input property. The default value is bottom-left.
+      </p>
+      <p>
+        To detect the change in value of the dropdown use <strong>(valueChange)</strong> output property.
+      </p>
+      <div class="h5"><strong> Properties (lib-dropdown-option) </strong></div>
+      <p>
+        To assign a value to the option use <strong>[value]</strong> input property (required).
+      </p>
+      <div class="h5"><strong> (lib-dropdown)</strong> </div>
+      <p>
+        To assign a on load value to the form control use <strong>DropdownModel</strong> and pass during formControl initialization.
+      </p>
+    </div>
+</ng-demo-page>
+
+
+

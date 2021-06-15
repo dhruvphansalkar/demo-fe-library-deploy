@@ -1,0 +1,65 @@
+<ng-demo-page>
+  <div pageTitle>
+    Accordion Component
+  </div>
+  <div component>
+  </div>
+  <div description>
+    This is a accordion with 2 states controlled by the expanded property
+  </div>
+  <div examplesTab>
+    <p>
+      An example of an Accordion
+    </p>
+    <div>
+      <lib-accordion #lib [expanded]="expanded">
+        <div header-content>
+          accordian header content
+        </div>
+        <div body-content>
+          accordion content
+        </div>
+      </lib-accordion>
+      <button class="btn btn-primary-demo m-1" (click)="open(lib)"> open</button>
+      <button class="btn btn-primary-demo m-1" (click)="close(lib)"> close</button>
+    </div>
+    <pre>
+      <code>
+      &lt;lib-accordion [expanded] = &quot;expanded&quot;&gt;
+        &lt;div header-content&gt;
+        accordian header content
+        &lt;/div&gt;
+        &lt;div body-content&gt;
+          Accordian Content
+        &lt;/div&gt;
+      &lt;/lib-accordion&gt;
+      </code>
+    </pre>
+  </div>
+  <div apiOverview>
+    <div class="h5">Input Properties</div>
+    <p>
+      To control the openening and closing of the accordion use <strong>[expanded]</strong> attribute.
+    </p>
+    <div class="h5">Methods</div>
+    <p>
+      To toggle the state of the accordian use <strong>toggle(): boolean</strong> method.
+    </p>
+    <p>
+      To close the accordian use <strong>closeAccordion(): void</strong> method.
+    </p>
+    <p>
+      To open the accordian use <strong>openAccordion(): void</strong> method.
+    </p>
+    <p>
+      To get the status of accordian's expansion use <strong>isExpanded(): boolean</strong> method.
+    </p>
+    <div class="h5">Content Selectors</div>
+    <p>
+      To customize or add content to the accordions header use <strong>header-content</strong>.
+    </p>
+    <p>
+      To add content to the accordions body use <strong>body-content</strong>.
+    </p>
+  </div>
+</ng-demo-page>

@@ -1,0 +1,9 @@
+<div *ngIf="showSprinner">
+  <div class="spinner-backdrop" [ngClass]="{'show': showSprinner}"></div>
+</div>
+  
+<div class="text-center spinner-container" [hidden]="!showSprinner">
+  <div class="spinner-border spinner-body" [ngClass]="customClass" [ngStyle]="{'width.rem':width,'height.rem':height}" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+</div>

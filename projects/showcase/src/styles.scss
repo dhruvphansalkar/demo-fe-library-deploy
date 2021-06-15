@@ -1,0 +1,108 @@
+/* You can add global styles to this file, and also import other style files */
+/* Useful css classes */
+html,
+body {
+  max-width: 100%;
+}
+*::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+*::-webkit-scrollbar-track {
+  background: rgb(221, 221, 221);
+}
+*::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  border: 3px solid #bdbdbd;
+  background-color: #bdbdbd;
+}
+.content {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+
+  .container-fluid-demo {
+    padding-right: 0;
+    padding-left: 0;
+    overflow-x: hidden;
+  }
+  
+  /* SIDEBAR COMPONENT */
+
+  .sidebar {
+    padding-top: 20px;
+    border-right: 1px solid rgba(0, 0, 0, .1);
+    height: calc(100vh - 4rem);
+    overflow-y: auto;
+
+    & ul {
+      &>li>a {
+        display: block;
+        padding: .25rem 1.5rem;
+        font-size: 90%;
+        color: rgba(0, 0, 0, .65);
+
+        &:hover {
+          color: rgba(0, 0, 0, .85);
+          text-decoration: none;
+          background-color: transparent;
+        }
+      }
+    }
+
+    & .nav {
+      width: 149px;
+      max-width: 151px;
+      height: 100vh;
+      overflow-y: auto;
+    }
+  }
+
+  /* MAIN CONTENT */
+  .main {
+    max-height: 100vh;
+    min-height: 100vh;
+    width: calc(100% - 340px);
+    padding: 0 15px;
+    overflow: auto;
+    margin: 0 auto;
+  }
+  lib-footer {
+    flex: 100%
+  }
+}
+
+/* SHOCASE COMPONENT */
+.showcase {
+  &--component-preview {
+    margin: 1.5em 0;
+  }
+
+  margin: 1.5em 0;
+
+  &--section {
+    padding: 1em;
+    border: 1px solid;
+    border-color: #ffffff #dee2e6 #dee2e6 #dee2e6;
+
+    .h4,
+    .h5 {
+      margin: .5em 0;
+    }
+
+    pre {
+      padding-top: 20px;
+      background-color: #f8f9fa;
+      margin-top: 10px;
+      code {
+        color: #a1a1a1;
+      }
+    }
+    code {
+      text-align: left;
+      font-family: Consolas, "courier new";
+      padding: 2px;
+      font-size: 105%;
+    }
+  }
+}

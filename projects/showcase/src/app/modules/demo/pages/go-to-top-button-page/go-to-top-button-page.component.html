@@ -1,0 +1,44 @@
+<ng-demo-page>
+  <div pageTitle>
+    Go to top Button Component
+  </div>
+  <div component>
+  </div>
+  <div description>
+    This component will show a button when scrolling is performed and go to top of the page upon clicking it.
+  </div>
+  <div examplesTab>
+    <p>
+      An example of input text
+    </p>
+    <div>
+      <lib-go-to-top-button #goToTop></lib-go-to-top-button>
+      <button class="btn btn-primary-demo m-1" (click) ="show(goToTop)">show</button>
+      <button class="btn btn-primary-demo m-1" (click) ="hide(goToTop)">hide</button>
+    </div>
+    <pre>
+        <code>&lt;lib-go-to-top-button&gt;&lt;/lib-go-to-top-button&gt;</code>
+    </pre>
+  </div>
+  <div apiOverview>
+    <div class="h5">Input Properties</div>
+    <p>
+      To assign a id to the button use <strong>[id]</strong> input attribute.
+    </p>
+    <p>
+      To assign a perticular scroll height at which the button becomes visible <strong>[scrollHeight]</strong> input attribute.
+    </p>
+    <p>
+      To assign custom classes to the button use <strong>[customClass]</strong> input attribute.
+    </p>
+    <div class="h5">API Methods</div>
+    <p>
+      To display the button use <strong>showButton(): void</strong> method.
+    </p>
+    <p>
+      To hide the button use <strong>hideButton(): void</strong> method.
+    </p>
+  </div>
+</ng-demo-page>
+
+

@@ -1,0 +1,23 @@
+ngb-pagination.paginator-demo{
+    height: 2rem;
+    & ul > li {
+        & > a {
+            padding: 0.3rem;
+            box-shadow: none !important;
+          }
+        &:not(.active) > a {
+            color: grey !important;
+            border: none !important;
+        } 
+        &.active > a {
+            color: black !important;
+            background-color: inherit !important;
+            border: none !important
+        }
+        &.focus > a {
+            color: black !important;
+            background-color: inherit !important;
+            border: none !important;
+        }
+    }
+}

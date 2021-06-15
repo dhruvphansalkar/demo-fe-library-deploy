@@ -1,0 +1,50 @@
+<ng-demo-page>
+  <div pageTitle>
+    Sidebar
+  </div>
+  <div description>
+    <div>
+      Sidebar is sticky and is collapsible to the left side. It works via
+      content trasclution. A section named <code>[input]</code> could be passed
+      for render a input text for searching and another section maed
+      <code>[menu]</code> could be passed for rendere the menu, above I used the
+      <code>Tree Menu Component</code>.
+    </div>
+  </div>
+  <div examplesTab>
+    <p>An example of Sidebar</p>
+    <lib-sidebar>
+      <div menu>
+        <lib-tree-menu [menuItems]="sidebarItems"></lib-tree-menu>
+      </div>
+    </lib-sidebar>
+    <div>
+      This is how the main page should be structured.
+    </div>
+    <pre>
+      <code [innerText]="sidebarHtmlCode">
+      </code>
+    </pre>
+    <code
+          >import {{ "{" }} SidebarModel {{ "}" }} from
+          'projects/lib/src/lib/modules/sidebar/sidebar';</code
+        >
+    <pre>
+      <code>
+          sidebarItems: Array&lt;SidebarModel&gt; = [
+              {{'{'}} text: 'Input Text', routerLink: '/demo/input-text-page'{{'}'}},
+              {{'{'}} text: 'Buttons', route: '/demo/button-examples'{{'}'}},
+              ];
+      </code>
+    </pre>
+    </div>
+  <div apiOverview>
+    <div class="h5">NgContent Sections</div>
+    <div>
+      <code>[input]</code> This section is used for creating sidebar with an <code>Input Text</code> at the top
+    </div>
+    <div>
+      <code>[menu]</code> This section is used for creating sidebar with a menu
+    </div>
+  </div>
+</ng-demo-page>

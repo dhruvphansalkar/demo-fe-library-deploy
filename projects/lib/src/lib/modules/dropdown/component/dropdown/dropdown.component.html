@@ -1,0 +1,21 @@
+
+<div *ngIf = "initDone && optionsList.toArray()" ngbDropdown [ngClass] = "!blockButton ? 'd-inline-block' : ''" >
+    <button (blur)="onTouched()" [disabled]="isDisabled ? isDisabled : false" class="btn dropdown-menu-button-demo"
+    id="dropdownBasic1" ngbDropdownToggle (click)="focusFunction()" (focusout)="focusOutFunction()"
+    [ngClass] = "blockButton ? 'btn-block' : ''">
+        <span class="mr-2" [ngClass]="controlValue.label ? '' : 'placeholder'">{{ controlValue.label ? controlValue.label : defaultLabel }}</span>
+        <i  class="icon-align" [ngClass]="arrowToggleController ? 'fa fa-angle-up text-primary' : 'fa fa-angle-down'"></i>
+    </button>
+    <div [ngClass] = "blockButton ? 'block-button-menu' : ''" class = "dropdown-menu-demo" ngbDropdownMenu aria-labelledby="dropdownBasic1">
+      <div *ngFor="let item of optionsList.toArray(); let i = index">
+        <div ngbDropdownItem [innerHTML] = "labelList[i] | htmlDesanitization" (click)="onSelectValue(item)"></div>
+      </div>
+    </div>
+</div>
+
+
+
+
+
+
+

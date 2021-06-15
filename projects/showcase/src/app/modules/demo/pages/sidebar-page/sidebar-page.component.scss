@@ -1,0 +1,9 @@
+:host {
+  ::ng-deep {
+    lib-sidebar {
+      .sidebar-demo {
+        max-height: 500px;
+      }
+    }
+  }
+}
