@@ -6,21 +6,18 @@
 - [Dependencies](#lib-deps)
 
 # <a id="lib-introuction">Introduction</a>
-Lib is a UI Kit components library for Angular
-It also could be use for refreshing old products UI, providing an attractive and modern graphics based on Bootstrap and ng-bootstrap.
+This project consists of custom Angular components and scss styles.
 
 # <a id="lib-setting-up">Setting up Lib</a>
 
 After cloning the repository you will found two directories.
 <b>lib</b> and <b>showcase</b>.
-The first directory include the library code, the second one is a showcase that explain how the components work and how to use them.
-THe showcase contains some docs that shows you the configuration, the code and the models for each components.
+lib consists of the actual component library while showcase is used to display the components and demonstrate how to use them.
 
 For installing the library you need to run this command.
 ```npm
 npm run lib:install
 ```
-This will build and pack the library into a .tgz archive named <b>lib-0.0.1</b> and will install into the showcase project.
 
 For installing the library into another projects just type 
 
