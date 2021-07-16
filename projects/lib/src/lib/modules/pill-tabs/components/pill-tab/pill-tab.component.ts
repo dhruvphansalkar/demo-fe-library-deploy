@@ -9,6 +9,7 @@ export class PillTabComponent implements OnInit {
 
   @Input() title: string;
   titleCssClass: string;
+  titleStyleColor: string;
   bodyCssClass: string;
 
   constructor() {

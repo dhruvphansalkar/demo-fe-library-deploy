@@ -3,7 +3,7 @@
     <!--classes for tab headers-->
     <div class="small-box align-self-center d-flex justify-content-around">
         <ng-container *ngFor="let head of tabInstances; let i = index">
-            <a id="pill-link" [class]="head.titleCssClass" href="javascript:void(0)" (click)="tabClicked(i)" class="flex-fill p-1">
+            <a id="pill-link" [style.background-color] = "head.titleStyleColor" [class]="head.titleCssClass" href="javascript:void(0)" (click)="tabClicked(i)" class="flex-fill p-1">
                 <div class="text-center">{{head?.title}}</div>
             </a>   
         </ng-container>

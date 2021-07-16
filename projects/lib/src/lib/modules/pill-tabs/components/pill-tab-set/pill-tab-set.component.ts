@@ -12,6 +12,7 @@ export class PillTabSetComponent implements OnInit, AfterViewInit {
   @ContentChildren(PillTabComponent) tabInstances: QueryList<PillTabComponent>;
   @Output() tabClickEvent = new EventEmitter();
   @Input() selectedTabIndex = 0;
+  @Input() selectedColor = '#84BF41';
 
   constructor() { }
 
@@ -28,9 +29,11 @@ export class PillTabSetComponent implements OnInit, AfterViewInit {
         if (elIndex === selectedIndex) {
           element.titleCssClass = 'title-active';
           element.bodyCssClass = 'active show';
+          element.titleStyleColor = this.selectedColor;
         } else {
           element.titleCssClass = '';
           element.bodyCssClass = 'zero-size';
+          element.titleStyleColor = '';
         }
       });
     }

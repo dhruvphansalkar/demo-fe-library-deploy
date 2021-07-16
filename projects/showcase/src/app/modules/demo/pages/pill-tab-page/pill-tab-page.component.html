@@ -12,7 +12,7 @@
         An example of pills-tab-component
       </p>
       <div>
-        <lib-pill-tab-set>
+        <lib-pill-tab-set [selectedColor] = "'#84BF41'">
           <lib-pill-tab [title]="'Tab 1'">
             Content for Tab 1
           </lib-pill-tab>
@@ -27,7 +27,7 @@
       <pre>
         <code>
         &lt;lib-pill-tab-set&gt;
-          &lt;lib-pill-tab [title]=&quot;'Tab 1'&quot;&gt;
+          &lt;lib-pill-tab [selectedColor] = "'#84BF41'" [title]=&quot;'Tab 1'&quot;&gt;
             Content for Tab 1
           &lt;/lib-pill-tab&gt;
           &lt;lib-pill-tab [title]=&quot;'Tab 2 '&quot;&gt;
@@ -41,6 +41,9 @@
       </pre>
     </div>
     <div apiOverview>
+      <p>
+        To set the color of selected pill use the <strong>[selectedColor]</strong> attribute on &lt;lib-pill-tab-set&gt; selector.
+      </p>
       <p>
         To set a tab to be selected on load use the <strong>[selectedTabIndex]</strong> input attribute and pass the index of the tab
       </p>
